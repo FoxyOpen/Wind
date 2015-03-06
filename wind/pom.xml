@@ -1,0 +1,83 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>br.com.wind</groupId>
+  <artifactId>wind</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>war</packaging>
+  
+    <build>
+        <plugins>
+           <plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.2</version>
+				<configuration>
+					<source>${maven-compiler.version}</source>
+					<target>${maven-compiler.version}</target>
+				</configuration>
+			</plugin>
+			
+			<plugin>
+			    <artifactId>maven-surefire-plugin</artifactId>
+			    <version>${maven-surefire.version}</version>
+			</plugin>
+        </plugins>
+    </build>
+
+    <dependencies>
+		<!-- JEE 7 -->
+	   	<dependency>
+			<groupId>javax</groupId>
+			<artifactId>javaee-api</artifactId>
+			<version>${javaee-api.version}</version>
+			<scope>provided</scope>
+		</dependency>
+		
+		<!-- QBEasy -->
+		<dependency>
+			<groupId>br.com.boilerplatecorp</groupId>
+			<artifactId>qbeasy</artifactId>
+			<version>${br.com.boilerplatecorp.qbeasy.version}</version>
+		</dependency>
+		
+		<!-- JUnit -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${junit.junit.version}</version>
+			<scope>test</scope>
+		</dependency>
+		
+		<!-- PoDam -->
+		<dependency>
+		    <groupId>uk.co.jemos.podam</groupId>
+		    <artifactId>podam</artifactId>
+		    <version>${uk.co.jemos.podam.podam.version}</version>
+		</dependency>
+		
+		<!-- Model Mapper -->
+		<dependency>
+		  <groupId>org.modelmapper</groupId>
+		  <artifactId>modelmapper</artifactId>
+		  <version>${org.modelmapper.modelmapper.version}</version>
+		</dependency>
+    </dependencies>
+    
+    <properties>
+    
+		<!-- Plugins -->    
+        <maven-compiler.version>1.8</maven-compiler.version>
+    	<maven-surefire.version>2.17</maven-surefire.version>
+
+    	<!-- Dependencies -->
+        <javaee-api.version>7.0</javaee-api.version>
+        <br.com.boilerplatecorp.qbeasy.version>1.0</br.com.boilerplatecorp.qbeasy.version>
+        <junit.junit.version>4.12</junit.junit.version>
+        <uk.co.jemos.podam.podam.version>4.7.3.RELEASE</uk.co.jemos.podam.podam.version>
+        <wildfly.version>8.2.0.Final</wildfly.version>
+        <org.slf4j.slf4j-log4j.version>1.7.10</org.slf4j.slf4j-log4j.version>
+        <org.modelmapper.modelmapper.version>0.7.3</org.modelmapper.modelmapper.version>
+    	
+    	<!-- Configuracoes -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+</project>
